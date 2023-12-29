@@ -1,11 +1,16 @@
 {
+  "homepage": "https://andrewkim09.github.io/calculator-with-themes/",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "jquery": "^3.7.1"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.0"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
