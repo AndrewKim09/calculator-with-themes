@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="./output.css">
+  
+  
+  <title>Frontend Mentor | Calculator app</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="flex flex-col justify-center items-center">
+
+  <div role="calculator" class="calculator relative h-[700px] w-[500px]">
+    <div role="topDisplay" class="topDisplay flex flex-row justify-between items-end align-bottom h-[50px] w-full">
+      <div role="title" class="ml-2 text-[23px]">calc</div>
+
+      <div role="themeBox" class="flex items-end w-[110px] h-[50px] justify-between">
+        <p class="text-[10px] mb-2 tracking-wider">THEME</p>
+
+        <div role="toggleBox" class="flex flex-col items-center h-full w-[60px]">
+          <div class=" flex items-center justify-between w-[80%] text-[12px] mb-1">
+            <p>1</p>
+            <p>2</p>
+            <p>3</p>
+          </div>
+
+          <div role="toggle" class="toggle grid grid-cols-3 items-center justify-center relative h-[20px] rounded-full w-full">
+            <div role="themes" class="theme h-full w-full"><input class="hidden absolute" type="radio" checked="checked" name="theme" id="theme1"></div>
+            <div role="themes" class="theme h-full w-full"><input class="hidden absolute" type="radio" name="theme" id="theme2"></div>
+            <div role="themes" class="theme h-full w-full"><input class="hidden absolute" type="radio" name="theme" id="theme3"></div>
+            <div role="toggleCircle" class="toggleCircle absolute bottom-[3px] left-1 items-center align-middle grid w-[12px] h-[12px] bg-white rounded-full"></div>
+
+          </div>
+        </div>
+      </div>
+
+  </div>
+
+  <div role="display" class="display flex input w-full h-[15%] rounded-xl mt-5 justify-end align-middle items-center">
+    <p class="align-middle text-[60px] mr-[20px] w-max-full">399,981</p>
+  </div>
+
+  <div role="keypad" class="keypad h-[400px] p-5 grid grid-cols-4 grid-rows-5 gap-6 mt-6 rounded-lg">
+    <button class="keypadNumbers ">7</button>
+    <button class="keypadNumbers ">8</button>
+    <button class="keypadNumbers ">9</button>
+    <button class="deleteButton ">DEL</button>
+
+    <button class="keypadNumbers ">4</button>
+    <button class="keypadNumbers ">5</button>
+    <button class="keypadNumbers ">6</button>
+    <button class="operation ">+</button>
+
+    <button class="keypadNumbers ">1</button>
+    <button class="keypadNumbers ">2</button>
+    <button class="keypadNumbers ">3</button>
+    <button class="operation">-</button>
+
+    <button class="decimalButton ">.</button>
+    <button class="keypadNumbers ">0</button>
+    <button class="divideButton operation">/</button>
+    <button class="operation">x</button>
+
+    <button class="resetButton col-span-2">RESET</button>
+    <button class="equalButton col-span-2">=</button>
+  </div>
+
+</body>
+<script src="./script.js"></script>
+</html>

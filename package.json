@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "jquery": "^3.7.1"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  }
+}

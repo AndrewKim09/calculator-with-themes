@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&family=Ubuntu:wght@400;500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root:has(#theme1:checked){
+  --mainBackground: hsl(222, 26%, 31%);
+  --toggleBackground: hsl(223, 31%, 20%);
+  --screenBackground: hsl(224, 36%, 15%);
+
+  --keypadBackground: hsl(225, 21%, 49%);
+  --keypadShadow: hsl(224, 28%, 35%);
+
+  --keyBackground: hsl(6, 63%, 50%);
+  --keyShadow: hsl(6, 70%, 34%);
+
+  --keyBackground2: hsl(30, 25%, 89%);
+  --keyShadow2: hsl(28, 16%, 65%);
+
+  --keypadNumber: hsl(221, 14%, 31%);
+  --themeText: hsl(0, 0%, 100%);
+}
+
+:root:has(#theme2:checked){
+  --mainBackground: hsl(0, 0%, 90%);
+  --toggleBackground: hsl(0, 5%, 81%);
+  --screenBackground: hsl(0, 0%, 93%);
+
+  --keypadBackground: hsl(185, 42%, 37%);
+  --keypadShadow: hsl(185, 58%, 25%);
+
+  --keyBackground: hsl(25, 98%, 40%);
+  --keyShadow: hsl(25, 99%, 27%);
+
+  --keyBackground2: hsl(45, 7%, 89%);
+  --keyShadow2: hsl(35, 11%, 61%);
+
+  --keypadNumber: hsl(60, 10%, 19%);
+  --themeText: hsl(60, 10%, 19%);
+}
+
+:root:has(#theme3:checked){
+  --mainBackground: hsl(268, 75%, 9%);
+  --toggleBackground: hsl(268, 71%, 12%);
+  --screenBackground: hsl(268, 71%, 12%);
+
+  --keypadBackground: hsl(268, 47%, 21%);
+  --keypadShadow: hsl(290, 70%, 36%);
+
+  --keyBackground: hsl(281, 89%, 26%);
+  --keyShadow: hsl(285, 91%, 52%);
+
+  --keyBackground2: hsl(176, 100%, 44%);
+  --keyShadow2: hsl(177, 92%, 70%);
+
+  --keypadNumber: hsl(52, 100%, 62%);
+  --themeText: hsl(52, 100%, 62%);
+}
+
+.toggleCircle{
+  transition: left 0.2s ease-in-out;
+}
+
+:root:has(#theme1:checked){
+  .toggleCircle{
+    left: .25rem;
+  }
+}
+
+:root:has(#theme2:checked){
+  .toggleCircle{
+    left: 1.5rem;
+  }
+}
+
+:root:has(#theme3:checked){
+  .toggleCircle{
+    left: 2.75rem
+  }
+}
+
+#root, body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'League Spartan', sans-serif;
+  background-color: #f5f5f5;
+
+  font-weight: 700;
+}
+
+body{
+  background-color: var(--mainBackground)
+}
+
+.input{
+  background-color: var(--screenBackground)
+}
+
+.topDisplay{
+  color: var(--themeText)
+}
+
+.keypadNumbers, .deleteButton, .resetButton, .equalButton, .operation, .decimalButton{
+  border-radius: 10%;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.keypadNumbers, .operation, .decimalButton{
+  background-color: var(--keyBackground2);
+  box-shadow: 0px 4px var(--keyShadow2);
+  color: var(--keypadNumber)
+}
+
+.deleteButton{
+  background-color: var(--keypadBackground);
+  box-shadow: 0px 4px var(--keypadShadow);
+  color: var(--themeText)
+}
+
+.keypad{
+  background-color: var(--toggleBackground)
+}
+
+.display{
+  color: var(--themeText)
+}
+
+.toggleCircle{
+  background-color: var(--keyBackground)
+}
+
+.toggle{
+  background-color: var(--screenBackground)
+}
+
+.equalButton{
+  background-color: var(--keyBackground);
+  box-shadow: 0px 4px var(--keyShadow);
+  color: var(--themeText)
+}
+
+.resetButton{
+  background-color: var(--keypadBackground);
+  box-shadow: 0px 4px var(--keypadShadow);
+  color: var(--themeText)
+}
+
+@media screen and (max-width: 375px){
+  .calculator{
+    width: 375px;
+    height: 90%;
+  }
+
+  .display, .keypad, .topDisplay{
+    width: 100%;
+  }
+}
